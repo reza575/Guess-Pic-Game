@@ -11,7 +11,7 @@ This project is done in Kotlin with respectful to Clean Architecture
 
 ### Prerequisites
 
-Java
+Java,Kotlin
 
 
 ![Main Screen](https://github.com/reza575/Guess-Pic-Game/blob/master/screenshots/Guess_Pic_Game.png)
