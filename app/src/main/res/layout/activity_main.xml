@@ -1,182 +1,89 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:background="@drawable/sky2"
-    android:layout_height="match_parent">
-
-    <RelativeLayout
-        android:background="@android:color/transparent"
-        android:id="@+id/rel_gamefragment_head"
-        android:layout_marginRight="12dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginBottom="12dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:id="@+id/txt_gameFragment_title"
-            android:layout_alignParentLeft="true"
-            android:textColor="@color/white"
-            android:layout_marginLeft="18dp"
-            android:textStyle="bold"
-            android:text="Guess This Headline!"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:textSize="20sp"/>
-
-        <TextView
-            android:id="@+id/txt_gameFragment_link"
-            android:layout_alignParentRight="true"
-            android:layout_marginRight="20dp"
-            android:text="Entettainment"
-            android:textColor="@color/white"
-            android:background="@drawable/txt_red_shape"
-            android:textStyle="bold"
-            android:padding="6dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:textSize="14sp"/>
-
-    </RelativeLayout>
+    tools:context=".MainActivity">
 
     <ImageView
-        android:layout_below="@id/rel_gamefragment_head"
-        android:layout_marginRight="12dp"
+        android:src="@drawable/welcom2"
+        android:scaleType="centerCrop"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/img_homeActivity_welcome"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"/>
+
+    <ImageView
+        android:layout_below="@id/img_homeActivity_welcome"
+        android:src="@drawable/guess"
+        android:scaleType="fitCenter"
+        android:layout_marginRight="20dp"
         android:layout_marginTop="12dp"
-        android:layout_marginLeft="12dp"
-        android:layout_marginBottom="12dp"
-        android:id="@+id/img_fragmentGame_picurl"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="3dp"
+        android:id="@+id/img_homeActivity_guess"
         android:layout_width="match_parent"
         android:layout_height="200dp"/>
 
-    <RelativeLayout
-        android:background="@android:color/transparent"
-        android:id="@+id/rel_gamefragment_score"
-        android:layout_below="@id/img_fragmentGame_picurl"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TextView
-            android:id="@+id/txt_gameFragment_plus"
-            android:layout_alignParentLeft="true"
-            android:layout_marginLeft="50dp"
-            android:textStyle="bold"
-            android:text="+"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="1dp"
-            android:layout_centerVertical="true"
-            android:textSize="25sp"/>
-
-        <TextView
-            android:id="@+id/txt_gameFragment_score"
-            android:layout_toRightOf="@id/txt_gameFragment_plus"
-            android:layout_marginLeft="8dp"
-            android:text="0"
-            android:textColor="#B10B0B"
-            android:textStyle="bold"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:textSize="30sp"/>
-
-        <TextView
-            android:id="@+id/txt_gameFragment_message"
-            android:layout_toRightOf="@id/txt_gameFragment_score"
-            android:layout_marginLeft="8dp"
-            android:textStyle="bold"
-            android:text="Points Comming Your Way..."
-            android:textColor="@color/white"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:textSize="20sp"/>
-
-    </RelativeLayout>
-
-    <ProgressBar
-        android:background="@android:color/transparent"
-        android:id="@+id/pb_gameFragment_score"
-        android:layout_below="@id/rel_gamefragment_score"
+    <EditText
+        android:id="@+id/edt_homeActivity_name"
+        android:layout_below="@id/img_homeActivity_guess"
         android:layout_marginRight="20dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="8dp"
-        style="@android:style/Widget.ProgressBar.Horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-
-    <TextView
-        android:id="@+id/txt_gameFragment_h0"
-        android:tag="0"
-        android:gravity="center"
-        android:layout_below="@id/pb_gameFragment_score"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="9dp"
         android:layout_marginLeft="20dp"
         android:layout_marginBottom="9dp"
-        android:padding="8dp"
-        android:textColor="#000"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/txt_white_shape"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"/>
-
-    <TextView
-        android:id="@+id/txt_gameFragment_h1"
-        android:tag="1"
-        android:gravity="center"
-        android:layout_below="@id/txt_gameFragment_h0"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="9dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="9dp"
-        android:padding="8dp"
-        android:layout_centerHorizontal="true"
-        android:textColor="#000"
-        android:background="@drawable/txt_white_shape"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"/>
-
-    <TextView
-        android:layout_centerHorizontal="true"
-        android:gravity="center"
-        android:tag="2"
-        android:id="@+id/txt_gameFragment_h2"
-        android:layout_below="@id/txt_gameFragment_h1"
-        android:layout_marginRight="20dp"
-        android:layout_marginTop="9dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginBottom="9dp"
-        android:padding="8dp"
-        android:textColor="#000"
-        android:background="@drawable/txt_white_shape"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"/>
-
-
-    <TextView
         android:padding="6dp"
-        android:gravity="center"
-        android:textColor="@color/white"
-        android:id="@+id/txt_gameFragment_skip"
-        android:layout_alignParentBottom="true"
+        android:textColor="#000"
+        android:hint="Input your name"
+        android:background="@drawable/txt_white_shape"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/txt_homeActivity_scoretype"
+        android:layout_below="@id/edt_homeActivity_name"
+        android:layout_marginTop="9dp"
+        android:layout_marginLeft="130dp"
+        android:layout_marginBottom="9dp"
+        android:text="Your Score : "
+        android:padding="6dp"
+        android:textStyle="bold"
+        android:textColor="#A30707"
+        android:background="@android:color/transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/txt_homeActivity_score"
+        android:layout_below="@id/edt_homeActivity_name"
+        android:layout_toRightOf="@id/txt_homeActivity_scoretype"
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="9dp"
+        android:text="0 "
+        android:padding="6dp"
+        android:textColor="#A30707"
+        android:background="@android:color/transparent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="25sp"/>
+
+
+    <ImageView
+        android:layout_below="@id/txt_homeActivity_scoretype"
+        android:src="@drawable/play"
+        android:scaleType="fitCenter"
         android:layout_marginRight="20dp"
         android:layout_marginTop="12dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginBottom="24dp"
-        android:background="@drawable/txt_geray_shape"
-        android:text="Skip!! Give Up"
+        android:layout_marginBottom="12dp"
+        android:id="@+id/img_homeActivity_play"
         android:layout_width="match_parent"
-        android:textSize="22dp"
-        android:layout_height="wrap_content"/>
-
+        android:layout_height="130dp"/>
 
 </RelativeLayout>

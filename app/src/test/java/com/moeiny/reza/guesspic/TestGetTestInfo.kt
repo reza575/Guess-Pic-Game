@@ -1,7 +1,7 @@
 package com.moeiny.reza.guesspic
 
-import com.moeiny.reza.guesspic.game.presenter.GameService
-import com.moeiny.reza.guesspic.game.model.entity.TestInfo
+import com.moeiny.reza.guesspic.presenter.GameService
+import com.moeiny.reza.guesspic.model.entity.TestInfo
 import com.moeiny.reza.guesspic.utils.FireBaseStorageCallback
 import org.junit.Assert
 import org.junit.Before
